@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/cabecalho.ejs") %>
+    <link href="/css/style.css" rel="stylesheet">
+    <title>Site WEB III</title>
+</head>
+<body>
+<div class="container">
+    <div>
+        <div class="user">
+            <img src="/img/usuario.png" alt="">
+        <a href="/pessoas/cadastrar">
+            <button class="btn" style="color: black; background-color: lightblue;"> Cadastrar Aluno </button>
+        </a>
+        </div>
+        <br>
+
+        <div>
+            <img src="/img/disciplinas.png" alt="">
+            <a href="/disciplina">
+                <button class="btn" style="color: black; background-color: lightblue;"> Cadastrar Disciplina</button>
+            </a>
+        </div>
+
+    </div>
+</div>
+<footer><%- include("partials/rodape.ejs") %></footer>
+</body>
+</html>

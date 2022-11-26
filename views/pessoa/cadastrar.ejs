@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/cabecalho.ejs") %>
+    <link href="/css/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <H1>Cadastro de aluno</H1>
+    <form action="/pessoas" method="post">
+        <div class="mb-3" >
+            <label class="form-label">CÓDIGO</label>
+            <input type="number" class="form-control" name="codigo" >
+          </div>
+          <div class="mb-3">
+            <label class="form-label">NOME</label>
+            <input type="text" class="form-control" name="nome">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">IDADE</label>
+            <input type="number" class="form-control" name="idade">
+          </div>
+          <div>
+            <a></a>
+          <button type="submit" class="btn" style="color: black; background-color: lightblue;">Salvar</button>
+        </div>
+    </div>
+    </form></br>
+    <%- include("../partials/rodape.ejs") %>
+</body>
+</html>

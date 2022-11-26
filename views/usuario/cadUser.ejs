@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/cabecalho.ejs") %>
+    <link href="/css/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <H1>Cadastro Sistema</H1>
+    <form action="/usuario/cadUser" method="post">
+        <div class="mb-3">
+            <label class="form-label">E-mail</label>
+            <input name="email" class="form-control" type="email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">NOME</label>
+            <input name="nm" class="form-control" type="text">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Senha</label>
+            <input name="senhaUser" class="form-control" type="password">
+          </div>
+          <div>
+            <a></a>
+          <button type="submit" class="btn" style="color: black; background-color: lightblue;">Salvar</button>
+        </div>
+    </div>
+    </form></br>
+    <%- include("../partials/rodape.ejs") %>
+</body>
+</html>

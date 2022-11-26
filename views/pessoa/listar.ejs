@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/cabecalho.ejs") %>
+    <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class= "container">
+    <h3>Relatorio de pessoas</h3>
+
+    <table class="table">
+    <tr>
+        <th>Codigo</th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Detalhar</th>
+        <th>Atualizar</th>
+        <th>Deletar</th>
+    </tr>
+    <% for (let i = 0; i < lista.length ; i++){ %>
+           <% const pessoa = lista[i]; %>
+            <tr>
+                <td> <%= pessoa.codigo %> </td>
+                <td> <%= pessoa.nome %> </td>
+                <td> <%= pessoa.idade %> </td>
+                <td> <a href="/pessoa/<%= pessoa.codigo %>"> <button type="button" class="btn" style="color: black; background-color: lightblue;">Detalhes</button> </a> </td>
+                <td> <a href="/pessoas/cadastrar/<%= pessoa.codigo %>"> <button type="button" class="btn btn-warning">Atualizar</button> </a> </td>
+                <td> <a onclick = "return confirm (`confirme que quer deletar`)" href="/pessoas/remover/<%= pessoa.codigo %>" type="button" class="btn btn-danger">Deletar</a> </td>
+
+            </tr>
+        <% } %>
+    </table>
+    <br>
+    <a href="/"><button type="submit" class="btn" style="color: black; background-color: lightblue;">Voltar</button></a>
+</div>
+<footer>
+    <%- include("../partials/rodape.ejs") %>
+</footer>
+</body>
+</html>

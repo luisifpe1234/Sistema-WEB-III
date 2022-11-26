@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/cabecalho.ejs") %>
+    <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <% if(resultado == undefined){ %>
+            <div> Pessoa não encontrada </div>
+            <a href="/pessoas"> <button type="button" class="btn" style="color: black; background-color: lightblue;">Voltar</button></a>
+       <%} else { %>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"> Código: <%= resultado.codigo %></h5>
+              <h5 class="card-text">Nome: <%= resultado.nome%></h5>
+              <h5 class="card-text">Idade: <%= resultado.idade%></h5>
+            </div>
+          </div>
+            
+    <% } %>
+    <br>
+    <a href="/pessoas"> <button type="button" class="btn" style="color: black; background-color: lightblue;">Voltar</button></a>
+</div>
+<footer>
+    <%- include("../partials/rodape.ejs") %>
+</footer>
+</body>
+</html>

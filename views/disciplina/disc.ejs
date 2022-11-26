@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/cabecalho.ejs") %>
+    <link href="/css/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <H1>Cadastro de disciplinas</H1>
+    <form action="/listar_dis" method="post">
+        <div class="mb-3">
+            <label class="form-label">Código da disciplina</label>
+            <input name="codigod" class="form-control" type="text">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Nome Disciplina</label>
+            <input name="nd" class="form-control" type="text">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Carga Horária</label>
+            <input name="cargah" class="form-control" type="text">
+          </div>
+          <div>
+            <a></a>
+          <button type="submit" class="btn" style="color: black; background-color: lightblue;">Salvar</button>
+        </div>
+    </div>
+    </form></br>
+    <%- include("../partials/rodape.ejs") %>
+</body>
+</html>
