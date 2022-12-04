@@ -20,13 +20,14 @@ const PessoaModel = require("../models/PessoaModel");
             pessoa = await PessoaModel.findOne({codigo: cod});
             escondido = "hidden";
         };
-        res.render("/pessoa/cadastrar", {pessoa, escondido});
+        res.render("pessoa/cadastrar", {pessoa, escondido});
     };
 
     static async atualizar(req, res){
         const pessoa = req.body;
         if (pessoa.id){
             await PessoaModel.findOneAndUpdate({codigo: pessoa.codigo}, {
+
                 nome: pessoa.nome,
                 idade: pessoa.idade
             })

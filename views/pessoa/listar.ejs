@@ -18,7 +18,6 @@
         <th>Nome</th>
         <th>Idade</th>
         <th>Detalhar</th>
-        <th>Atualizar</th>
         <th>Deletar</th>
     </tr>
     <% for (let i = 0; i < lista.length ; i++){ %>
@@ -28,7 +27,6 @@
                 <td> <%= pessoa.nome %> </td>
                 <td> <%= pessoa.idade %> </td>
                 <td> <a href="/pessoa/<%= pessoa.codigo %>"> <button type="button" class="btn" style="color: black; background-color: lightblue;">Detalhes</button> </a> </td>
-                <td> <a href="/pessoas/cadastrar/<%= pessoa.codigo %>"> <button type="button" class="btn btn-warning">Atualizar</button> </a> </td>
                 <td> <a onclick = "return confirm (`confirme que quer deletar`)" href="/pessoas/remover/<%= pessoa.codigo %>" type="button" class="btn btn-danger">Deletar</a> </td>
 
             </tr>
