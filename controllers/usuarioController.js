@@ -1,5 +1,5 @@
 const UsuarioModel = require("../models/UsuarioModel");
-//const bcryptjs = require("bcryptjs");
+
 
 class UsuarioController{
 
@@ -13,7 +13,6 @@ class UsuarioController{
         const resultado = await UsuarioModel.findOne({email: usuario.email})
         if (resultado){
             if( usuario.senhaUser==resultado.senhaUser){
-            //if (bcryptjs.compareSync(usuario.senhaUser, resultado.senhaUser)){
                 req.session.usuario = resultado.email;
                 console.log("confirmou senha")
                 res.redirect("/");
@@ -70,29 +69,7 @@ class UsuarioController{
         }
     };
 
-   // static async cadastroUserPost(req, res){
-     //   const usuario = req.body;
-       // const salt = bcryptjs.genSaltSync();
-       // const hash = bcryptjs.hashSync(usuario.senhaUser, salt);
-
-        //if (usuario.id){
-    //  await UsuarioModel.findOneAndUpdate({email: usuario.email},
-      //      {
-        //        nome: usuario.nm,
-          //      senhaUser: hash
-
-            //});
-            //res.redirect("/usuario?s=1")
-        //} else{
-          //  const novaUsuario = new UsuarioModel({
-            //    email:req.body.email,
-             //   nome: req.body.nm,
-              //  senhaUser : hash
-           // });
-           // await novaUsuario.save();
-           // res.redirect("/usuario?s=1");
-       // }
-   // }
+   
 
 }
 

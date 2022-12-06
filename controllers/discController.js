@@ -2,18 +2,6 @@ const DiscModel = require("../models/DiscModel")
 
 class DiscController{
 
-   // static async  function(req, res){
-     //   const d = req.body;
-       // const novaDisc = new DiscModel({
-    
-         //   codigod: d.codigod,
-           // nd: d.nd,
-           // cargah: d.cargah
-            
-         //   });
-          //  await novaDisc.save();
-       // res.redirect("/listar_dis")
-    //});
     
 
     static async listardisc (req, res){
